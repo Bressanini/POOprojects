@@ -38,8 +38,8 @@ public class DataHora {
         return data.toString() + " " + hora.toString();
     }
     
-    public DataHora clone(DataHora aux){
-        return new DataHora(aux.getData(), aux.getHora());
+    public DataHora clone(){
+        return new DataHora(this.getData(), this.getHora());
     }
 
     public Data getData() {
