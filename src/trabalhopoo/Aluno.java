@@ -15,6 +15,7 @@ public class Aluno {
     private float n1;
     private float n2;
     private float t;
+    private Data nascimento;
 
     public String getMatricula() {
         return matricula;
@@ -84,12 +85,25 @@ public class Aluno {
         this.t = 0;
     }
     
-    public Aluno(String matricula, String nome, float n1, float n2, float t){
+    public Aluno(String matricula, String nome, float n1, float n2, float t, Data nascimento){
         this.matricula = matricula;
         this.nome = nome;
         this.n1 = n1;
         this.n2 = n2;
         this.t = t;
+        this.nascimento = nascimento;
     }
-    
+
+    public Data getNascimento() {
+        return nascimento;
+    }
+
+    public void setNascimento(Data nascimento) {
+        this.nascimento = nascimento;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" + "matricula=" + matricula + ", nome=" + nome + ", n1=" + n1 + ", n2=" + n2 + ", t=" + t + ", nascimento=" + nascimento + ", media=" + this.getMedia() + '}';
+    }
 }
